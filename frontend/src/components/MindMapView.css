@@ -1,0 +1,48 @@
+.mindmap-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+  }
+  
+  .mindmap-container h2 {
+    color: #0066CC;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mindmap-container > p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mindmap-diagram {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .mermaid {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .mindmap-info {
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .no-mindmap {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #666;
+  }
