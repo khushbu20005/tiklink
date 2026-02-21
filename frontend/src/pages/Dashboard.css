@@ -1,0 +1,306 @@
+
+.dashboard-container {
+    min-height: calc(100vh - 70px);
+    background-color: #f5f5f5;
+    padding: 0;
+  }
+  
+  .dashboard-layout {
+    display: flex;
+    height: 100%;
+  }
+  
+  /* ==================== SIDEBAR ==================== */
+  .dashboard-sidebar {
+    width: 300px;
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dashboard-sidebar h3 {
+    color: #0066CC;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .note-item {
+    background: #f9f9f9;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .note-item:hover {
+    border-color: #0066CC;
+    background: #f0f8ff;
+  }
+  
+  .note-item.active {
+    background: #e8f2ff;
+    border-color: #0066CC;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
+  }
+  
+  .note-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .note-title {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .note-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: 0.2s;
+    opacity: 0.6;
+  }
+  
+  .delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  .no-notes {
+    color: #999;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* ==================== MAIN CONTENT ==================== */
+  .dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .dashboard-header h1 {
+    color: #0066CC;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dashboard-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* ==================== TABS ==================== */
+  .dashboard-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .tab-btn:hover:not(:disabled) {
+    color: #0066CC;
+  }
+  
+  .tab-btn.active {
+    color: #0066CC;
+    border-bottom-color: #0066CC;
+  }
+  
+  .tab-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* ==================== CONTENT ==================== */
+  .dashboard-content {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+  }
+  
+  .section-info {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .section-info h2 {
+    color: #0066CC;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-info p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .flashcards-section,
+  .mindmap-section {
+    width: 100%;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #999;
+  }
+  
+  .empty-state p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  /* ==================== STATISTICS ==================== */
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .stat-card {
+    background: linear-gradient(135deg, #0066CC 0%, #003366 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  .stat-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: white;
+  }
+  
+  .stat-content p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 768px) {
+    .dashboard-layout {
+      flex-direction: column;
+    }
+  
+    .dashboard-sidebar {
+      width: 100%;
+      max-height: 200px;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .dashboard-main {
+      padding: 1rem;
+    }
+  
+    .dashboard-tabs {
+      gap: 0.5rem;
+    }
+  
+    .tab-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .dashboard-content {
+      padding: 1rem;
+    }
+  
+    .dashboard-stats {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+  
+    .stat-card {
+      padding: 1rem;
+    }
+  
+    .stat-icon {
+      font-size: 1.5rem;
+    }
+  
+    .stat-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-sidebar {
+      max-height: 150px;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .dashboard-tabs {
+      gap: 0.25rem;
+    }
+  
+    .tab-btn {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+    }
+  
+    .dashboard-stats {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+  

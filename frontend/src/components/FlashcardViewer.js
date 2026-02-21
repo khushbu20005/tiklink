@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './FlashcardViewer.css';
+import FlashcardViewer from '../components/FlashcardViewer';
 
-function FlashcardViewer({ flashcards }) {
+function  FlashcardViewerComponent({ flashcards }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -62,3 +62,4 @@ function FlashcardViewer({ flashcards }) {
     </div>
   );
 }
+ export default  FlashcardViewerComponent; 

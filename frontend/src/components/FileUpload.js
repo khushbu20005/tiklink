@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './FileUpload.css';
-
 function FileUpload({ onUploadSuccess }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -97,3 +95,4 @@ function FileUpload({ onUploadSuccess }) {
     </div>
   );
 }
+export default FileUpload;

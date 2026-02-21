@@ -46,3 +46,4 @@ function MindMapView({ flashcards, topicName = 'Study Topic' }) {
     </div>
   );
 }
+export default MindMapView;
